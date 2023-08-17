@@ -27,8 +27,7 @@ exports. Query= {
         return categories.find(category => category.id === id)
     },
     product: (parent,{id},{products}) => {
-        
-        return products.find(product => product.id === id)
+        return products.find(product => id === product.id)
     },
     review:(parent,args,context)=>{
         return reviews.filter(review => review.id === args.id)

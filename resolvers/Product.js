@@ -1,6 +1,6 @@
 exports.Product= {
-    category:({id:categoryId},args,{categories}) => {
-        
+    category:(parent,args,{categories}) => {
+        const categoryId = parent.categoryId
         return categories.find(category => category.id === categoryId)
     },
     reviews:({id},{filter},{reviews})=>{
